@@ -1,38 +1,42 @@
 import random
+from settings import get_difficulty_settings
 
-def show_welcome():
-    print("🎯 Welcome to the Number Guessing Game!")
-    print("I'm thinking of a number between 1 and 100.")
-    print("Try to guess it in as few attempts as possible.\n")
+def show_welcome(max_number, max_attempts):
+    print("\n🎯 Welcome to the Number Guessing Game!")
+    print(f"I'm thinking of a number between 1 and {max_number}.")
+    print(f"You have {max_attempts} attempts to guess it.\n")
 
-def get_user_guess():
+def get_user_guess(max_number):
     while True:
         try:
             guess = int(input("Enter your guess: "))
-            if 1 <= guess <= 100:
+            if 1 <= guess <= max_number:
                 return guess
             else:
-                print("Please enter a number between 1 and 100.")
+                print(f"Please enter a number between 1 and {max_number}.")
         except ValueError:
             print("Invalid input. Enter a valid number.")
 
 def play_game():
-    number = random.randint(1, 100)
+    max_number, max_attempts = get_difficulty_settings()
+    number = random.randint(1, max_number)
     attempts = 0
 
-    show_welcome()
+    show_welcome(max_number, max_attempts)
 
-    while True:
-        guess = get_user_guess()
+    while attempts < max_attempts:
+        guess = get_user_guess(max_number)
         attempts += 1
 
         if guess < number:
-            print("Too low! Try again.\n")
+            print("Too low!\n")
         elif guess > number:
-            print("Too high! Try again.\n")
+            print("Too high!\n")
         else:
-            print(f"✅ Correct! You guessed the number in {attempts} attempts.")
-            break
+            print(f"✅ You guessed it in {attempts} attempts!")
+            return
+
+    print(f"❌ Game Over! The number was {number}.")
 
 def main():
     play_game()
