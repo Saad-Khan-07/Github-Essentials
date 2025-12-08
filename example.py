@@ -1,10 +1,10 @@
 import random
 from settings import get_difficulty_settings
 
-def show_welcome(max_number, max_attempts):
-    print("\n🎯 Welcome to the Number Guessing Game!")
-    print(f"I'm thinking of a number between 1 and {max_number}.")
-    print(f"You have {max_attempts} attempts to guess it.\n")
+def show_welcome():
+    print("🎯 Welcome to the Number Guessing Game!")
+    print("I'm thinking of a number between 1 and 100.")
+    print("Try to guess it in as few attempts as possible.\n")
 
 def get_user_guess(max_number):
     while True:
