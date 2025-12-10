@@ -22,7 +22,7 @@ def play_game():
     number = random.randint(1, max_number)
     attempts = 0
 
-    show_welcome(max_number, max_attempts)
+    show_welcome(max_number, max_attemptsw)
 
     while attempts < max_attempts:
         guess = get_user_guess(max_number)
