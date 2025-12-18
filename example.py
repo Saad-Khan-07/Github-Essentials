@@ -47,3 +47,4 @@ if __name__ == "__main__":
 
 
 print("lets learn git today wassup!")
+print("additional instructions for the game: ")
