@@ -3,6 +3,7 @@ def get_difficulty_settings():
     print("1. Easy   (1–50, 10 attempts)")
     print("2. Medium (1–100, 7 attempts)")
     print("3. Hard   (1–200, 5 attempts)")
+    print("4. Custom")
 
     choice = input("Enter your choice (1/2/3): ")
 
@@ -12,6 +13,10 @@ def get_difficulty_settings():
         return 100, 7
     elif choice == "3":
         return 200, 5
+    elif choice == "4":
+        custom_range = int(input("Enter the range (1–200): "))
+        custom_attempts = int(input("Enter the number of attempts: "))
+        return custom_range, custom_attempts
     else:
         print("Invalid choice. Defaulting to Medium.")
         return 100, 7
