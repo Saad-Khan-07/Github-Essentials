@@ -46,4 +46,4 @@ if __name__ == "__main__":
     main()
 
 
-print("lets learn git")
+print("lets learn git today wassup!")
