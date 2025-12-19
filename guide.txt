@@ -1,0 +1,13 @@
+Number Guessing Game Guide (Version 1)
+
+Rules:
+- The game will choose a random number between 1 and 10.
+- Your goal is to guess the number.
+- Game gives hints: too high, too low, or correct.
+
+How to play:
+1. Run game.py
+2. Enter a number when prompted
+3. Keep guessing until you win
+
+Good luck!
