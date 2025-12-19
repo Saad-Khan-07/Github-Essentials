@@ -2,9 +2,18 @@
 
 import random
 
-def get_random_number():
-    """Return a random number between 1 and 10."""
-    return random.randint(1, 10)
+def get_random_number(low, high):
+    """Return a random number within the selected range."""
+    return random.randint(low, high)
+
+def get_difficulty_range(choice):
+    """Return (min, max) values based on difficulty choice."""
+    if choice == 1:
+        return (1, 5)      # Easy
+    elif choice == 2:
+        return (1, 10)     # Medium
+    elif choice == 3:
+        return (1, 20)     # Hard
 
 def check_guess(guess, target):
     """Compare guess to target and return a message."""
