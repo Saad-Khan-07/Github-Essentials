@@ -1,13 +1,28 @@
 # game.py
 
-from gamefeatures import get_random_number, check_guess
+from gamefeatures import get_random_number, check_guess, get_difficulty_range
 
 def play_game():
     print("🎮 Welcome to the Number Guessing Game!")
-    print("I'm thinking of a number between 1 and 10...")
+    print("Select a difficulty level:")
+    print("1. Easy (1–5)")
+    print("2. Medium (1–10)")
+    print("3. Hard (1–20)")
 
-    target = get_random_number()
+    while True:
+        try:
+            difficulty_choice = int(input("Enter choice (1-3): "))
+            if difficulty_choice not in [1, 2, 3]:
+                raise ValueError
+            break
+        except ValueError:
+            print("❌ Invalid choice. Please enter 1, 2, or 3.")
+
+    low, high = get_difficulty_range(difficulty_choice)
+    target = get_random_number(low, high)
     attempts = 0
+
+    print(f"🌟 I am thinking of a number between {low} and {high}...")
 
     while True:
         try:
