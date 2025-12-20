@@ -3,7 +3,7 @@
 from gamefeatures import get_random_number, check_guess, get_difficulty_range, calculate_score
 
 def play_game():
-    print("🎮 Welcome to the Number Guessing Game! WASSUUUUPPPPPPP🔥🔥🔥🔥🔥🔥")
+    print("🎮 Welcome to the Number Guessing Game! WASSUUUUPPPPPPP🔥🔥🔥🔥🔥🔥! YOOO!")
     print("Select a difficulty level:")
     print("1. Easy (1–5)")
     print("2. Medium (1–10)")
