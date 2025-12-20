@@ -17,10 +17,10 @@ def get_difficulty_range(choice):
 
 def check_guess(guess, target):
     """Compare guess to target and return a message."""
-    if guess < target:
-        return "⬇️ Too low!"
+    elif guess < target:
+        return "⬇️ Too low! Try guessing a higher number."
     elif guess > target:
-        return "⬆️ Too high!"
+        return "⬆️ Too high! Try a smaller number."
     else:
         return "🎉 Correct!"
 
