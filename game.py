@@ -1,6 +1,6 @@
 # game.py
 
-from gamefeatures import get_random_number, check_guess, get_difficulty_range
+from gamefeatures import get_random_number, check_guess, get_difficulty_range, calculate_score
 
 def play_game():
     print("🎮 Welcome to the Number Guessing Game!")
@@ -37,8 +37,10 @@ def play_game():
         print(result)
 
         if result.startswith("🎉"):
-            print(f"You guessed it in {attempts} attempts!")
-            break
+    score = calculate_score(attempts, difficulty_choice)
+    print(f"You guessed it in {attempts} attempts!")
+    print(f"🏆 Your score: {score}")
+    break
 
 if __name__ == "__main__":
     play_game()

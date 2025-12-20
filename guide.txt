@@ -1,13 +1,11 @@
-Number Guessing Game Guide (Version 1)
+NEW FEATURE — SCORE SYSTEM (Version 2)
 
-Rules:
-- The game will choose a random number between 1 and 10.
-- Your goal is to guess the number.
-- Game gives hints: too high, too low, or correct.
+Your score depends on:
+- Difficulty level
+- Number of attempts
 
-How to play:
-1. Run game.py
-2. Enter a number when prompted
-3. Keep guessing until you win
+Easy:    10 points minus 1 per guess
+Medium:  20 points minus 2 per guess
+Hard:    40 points minus 3 per guess
 
-Good luck!
+Score cannot go below zero.
