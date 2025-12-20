@@ -23,3 +23,24 @@ def check_guess(guess, target):
         return "⬆️ Too high!"
     else:
         return "🎉 Correct!"
+
+def calculate_score(attempts, difficulty_choice):
+    """
+    Calculate score based on attempts and difficulty:
+    - Easy:    10 points minus 1 per attempt
+    - Medium:  20 points minus 2 per attempt
+    - Hard:    40 points minus 3 per attempt
+    Score cannot go below zero.
+    """
+    if difficulty_choice == 1:
+        base = 10
+        penalty = 1
+    elif difficulty_choice == 2:
+        base = 20
+        penalty = 2
+    else:
+        base = 40
+        penalty = 3
+
+    score = base - (attempts * penalty)
+    return max(score, 0)
