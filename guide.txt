@@ -10,7 +10,5 @@ Hard:    40 points minus 3 per guess
 
 Score cannot go below zero.
 
-THESE INSTRUCTIONS WILL KEEP GETTING UPDATED FOR YOUR CONVENIENCE
-KINDLY REACH OUT TO US IF YOU WANT TO SEE ANY OTHER INFORMATION ON THESE DOCUMENTS
-YOU CAN EVEN GIVE US SUGGESTIONS!!
-FEEL FREE TO LET THOSE IDEAS COME IN!
+Multiple Rounds:
+You can now play multiple rounds without restarting the game.
