@@ -1,6 +1,9 @@
 # game.py
 
 from gamefeatures import get_random_number, check_guess, get_difficulty_range, calculate_score
+import time
+
+start_time = time.time()
 
 def play_game():
     print("🎮 Welcome to the Number Guessing Game! WASSUUUUPPPPPPP🔥🔥🔥🔥🔥🔥")
@@ -49,6 +52,11 @@ def play_game():
     if again != "y":
         print("Goodbye!")
         break
+
+    end_time = time.time()
+    duration = round(end_time - start_time, 2)
+    print(f"⏱️ You took {duration} seconds to win!")
+
 
 if __name__ == "__main__":
     play_game()
