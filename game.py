@@ -43,5 +43,12 @@ def play_game():
     print(f"🏆 Your score: {score}")
     break
 
+    while True:
+    play_game()
+    again = input("Play again? (y/n): ").lower()
+    if again != "y":
+        print("Goodbye!")
+        break
+
 if __name__ == "__main__":
     play_game()
