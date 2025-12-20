@@ -12,3 +12,5 @@ Score cannot go below zero.
 
 Multiple Rounds:
 You can now play multiple rounds without restarting the game.
+
+Timer: Tracks how long each game takes to finish.
