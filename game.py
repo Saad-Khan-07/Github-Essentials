@@ -4,6 +4,7 @@ from gamefeatures import get_random_number, check_guess, get_difficulty_range, c
 
 def play_game():
     print("🎮 Welcome to the Number Guessing Game! WASSUUUUPPPPPPP🔥🔥🔥🔥🔥🔥")
+    print("New ranges from next week onwards. Try to sum up your points till then!!")
     print("Select a difficulty level:")
     print("1. Easy (1–5)")
     print("2. Medium (1–10)")
