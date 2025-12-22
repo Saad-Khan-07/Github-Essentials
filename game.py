@@ -48,9 +48,12 @@ def play_game():
 
         while True:
             play_game()
-            again = input("Play again? (y/n): ").lower()
-            if again != "y":
-                print("Goodbye!")
+            
+            # Strip whitespace and handle empty inputs
+            choice = input("\nPlay again? (y/n): ").strip().lower()
+            
+            if choice not in ('y', 'yes'):
+                print("Thanks for playing. Goodbye!")
                 break
 
     end_time = time.time()
