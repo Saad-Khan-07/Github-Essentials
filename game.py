@@ -41,17 +41,17 @@ def play_game():
         print(result)
 
         if result.startswith("🎉"):
-    score = calculate_score(attempts, difficulty_choice)
-    print(f"You guessed it in {attempts} attempts!")
-    print(f"🏆 Your score: {score}")
-    break
+            score = calculate_score(attempts, difficulty_choice)
+            print(f"You guessed it in {attempts} attempts!")
+            print(f"🏆 Your score: {score}")
+            break
 
-    while True:
-    play_game()
-    again = input("Play again? (y/n): ").lower()
-    if again != "y":
-        print("Goodbye!")
-        break
+        while True:
+            play_game()
+            again = input("Play again? (y/n): ").lower()
+            if again != "y":
+                print("Goodbye!")
+                break
 
     end_time = time.time()
     duration = round(end_time - start_time, 2)
